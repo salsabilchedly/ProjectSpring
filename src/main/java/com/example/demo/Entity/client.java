@@ -1,30 +1,27 @@
 package com.example.demo.Entity;
+
 import javax.persistence.*;
+import java.util.Date;
+
 
 @Entity
-@Table(name = "roles")
-public class Role {
+@Table(name = "client")
+public class client {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	@Enumerated(EnumType.STRING)
 	@Column(length = 20)
-	private ERole name;
-	public Role() {
+	private client name;
+	public client() {
 	}
-	public Role(ERole name) {
-		this.name = name;
-	}
+	 
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public ERole getName() {
-		return name;
-	}
-	public void setName(ERole name) {
-		this.name = name;
-	}
+	 
 }
